@@ -45,7 +45,7 @@ mongodb.MongoClient.connect(uri, (err, database) => {
 	if(err) winston.error(`[API](DATABASE) ${err}`);
 	winston.verbose('[API](DATABASE) Connected to database server');
 
-	const balances = database.db('balances').collection('balances');
+	const balances = database('balances').collection('balances');
 
 	/**
 	 * @async
